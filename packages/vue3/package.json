@@ -1,0 +1,45 @@
+{
+  "name": "@charrue/vue3-bundler",
+  "version": "0.0.1",
+  "description": "提供Vue3单文件组件的打包需求",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "vue3-bundler": "./bin/vue3-bundler.js"
+  },
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "author": "",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "typescript": "^3.7.5",
+    "vite": "^2.5.10",
+    "vue": "^3.2.25"
+  },
+  "dependencies": {
+    "@charrue/vue-bundler-shared": "workspace:*",
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.3",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "@vitejs/plugin-vue-jsx": "^1.3.10",
+    "@vue/compiler-sfc": "^3.2.37",
+    "esbuild": "^0.14.44",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.75.6",
+    "rollup-plugin-esbuild": "^4.9.1",
+    "unplugin-vue-define-options": "^0.6.1"
+  },
+  "devDependencies": {
+    "@types/rimraf": "^3.0.2",
+    "typescript": "^4.7.3",
+    "vite": "^2.9.12",
+    "vue": "^3.2.25"
+  }
+}

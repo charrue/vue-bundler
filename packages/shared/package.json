@@ -1,0 +1,33 @@
+{
+  "name": "@charrue/vue-bundler-shared",
+  "version": "0.0.1",
+  "description": "为vue-bundler提供的打包工具方法",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/charrue/vue-bundler.git",
+    "directory": "packages/shared"
+  },
+  "keywords": [
+    "vue",
+    "bundler",
+    "rollup",
+    "charrue"
+  ],
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.3",
+    "rollup": "^2.75.6"
+  },
+  "dependencies": {
+    "@charrue/load-config": "^0.0.5",
+    "@charrue/node-toolkit": "^0.2.0",
+    "kolorist": "^1.5.1"
+  }
+}

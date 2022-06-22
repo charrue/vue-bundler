@@ -1,0 +1,25 @@
+{
+  "include": ["packages/**/*.ts"],
+  "compilerOptions": {
+    "module": "esnext",
+    "baseUrl": ".",
+    "target": "es2018",
+    "lib": ["ESNext"],
+    "types": ["node"],
+    "declaration": true,
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ]
+  },
+}

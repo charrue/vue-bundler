@@ -1,0 +1,19 @@
+{
+  "name": "@charrue/vue-bundler-example-v3",
+  "private": true,
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "vue3-bundler"
+  },
+  "dependencies": {
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@charrue/vue3-bundler": "workspace:*",
+    "esbuild": "^0.14.44",
+    "typescript": "^4.7.3",
+    "vite": "^2.9.12"
+  }
+}
