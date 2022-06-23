@@ -9,7 +9,9 @@
   "scripts": {
     "build:shared": "pnpm run build --filter=@charrue/vue-bundler-shared",
     "build:v2": "pnpm run build --filter=@charrue/vue2-bundler",
-    "build:v3": "pnpm run build --filter=@charrue/vue3-bundler"
+    "build:v3": "pnpm run build --filter=@charrue/vue3-bundler",
+    "example:v2": "pnpm run build --filter=@charrue/vue-bundler-example-v2",
+    "example:v3": "pnpm run build --filter=@charrue/vue-bundler-example-v3"
   },
   "config": {
     "commitizen": {

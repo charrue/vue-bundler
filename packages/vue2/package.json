@@ -1,19 +1,26 @@
 {
   "name": "@charrue/vue2-bundler",
-  "version": "0.0.1",
-  "description": "提供Vu2单文件组件的打包需求",
+  "version": "0.0.4",
+  "description": "提供Vue2单文件组件的打包需求",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/charrue/vue-bundler",
+    "directory": "packages/vue2"
+  },
+  "license": "MIT",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "bin": {
     "vue2-bundler": "./bin/vue2-bundler.js"
   },
+  "files": [
+    "bin",
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "build": "rollup -c"
-  },
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
   },
   "dependencies": {
     "@charrue/vue-bundler-shared": "workspace:*",
@@ -22,15 +29,18 @@
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.3",
     "@vue/compiler-sfc": "^3.2.37",
-    "vue-template-compiler": "^2.6.14",
     "esbuild": "^0.14.44",
     "rimraf": "^3.0.2",
-    "typescript": "^4.7.3",
     "rollup": "^2.75.6",
     "rollup-plugin-esbuild": "^4.9.1",
-    "rollup-plugin-vue": "4.3.0"
+    "rollup-plugin-vue": "4.3.0",
+    "typescript": "^4.7.3",
+    "vue-template-compiler": "^2.6.14"
   },
   "devDependencies": {
     "@types/rimraf": "^3.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

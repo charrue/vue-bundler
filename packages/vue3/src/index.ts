@@ -8,9 +8,10 @@ export const clean = (dir: string) => {
 
 export const start = async () => {
   const userConfig = await getUserConfig();
-  logger.info("Clean dist directory...");
-  clean("dist");
-  logger.info("Start Build Vue File...");
+  logger.info("Clean output directory...", { color: true });
+  clean(userConfig.outputDir);
+
+  logger.info("Start Build Vue File...", { color: true });
   await build(userConfig);
 };
 

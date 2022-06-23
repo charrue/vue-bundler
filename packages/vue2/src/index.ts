@@ -11,7 +11,7 @@ export const start = async () => {
   logger.info("Clean output directory...", { color: true });
   clean(userConfig.outputDir);
 
-  logger.info("Start Build Vue File...");
+  logger.info("Start Build Vue File...", { color: true });
   await build(userConfig);
 };
 
