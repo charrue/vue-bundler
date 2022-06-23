@@ -24,7 +24,6 @@ jobs:
           cache: 'pnpm'
 
       - run: pnpm install
-      - run: pnpm run build
 
       - run: pnpm run build:shared
       - run: pnpm run build:v2

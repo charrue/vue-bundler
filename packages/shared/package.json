@@ -1,6 +1,6 @@
 {
   "name": "@charrue/vue-bundler-shared",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "为vue-bundler提供的打包工具方法",
   "repository": {
     "type": "git",
