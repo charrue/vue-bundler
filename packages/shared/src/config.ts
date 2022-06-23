@@ -8,6 +8,8 @@ export type BuildConfig = {
   outputDir: string;
   input: string;
   name: string;
+  shouldModuleBuild?: boolean;
+  shouldFullBuild?: boolean;
 };
 
 export type LoadConfigOptions = {
@@ -18,6 +20,8 @@ const defaultBuildConfig: BuildConfig = {
   input: "src/index.ts",
   outputDir: "dist",
   name: "",
+  shouldModuleBuild: true,
+  shouldFullBuild: true,
 };
 
 /**

@@ -1,6 +1,6 @@
 {
   "name": "@charrue/vue2-bundler",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "提供Vue2单文件组件的打包需求",
   "repository": {
     "type": "git",
