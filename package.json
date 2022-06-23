@@ -4,10 +4,11 @@
   "version": "1.0.0",
   "description": "",
   "keywords": [],
-  "license": "ISC",
+  "license": "MIT",
   "author": "",
   "scripts": {
     "build:shared": "pnpm run build --filter=@charrue/vue-bundler-shared",
+    "build:v2": "pnpm run build --filter=@charrue/vue2-bundler",
     "build:v3": "pnpm run build --filter=@charrue/vue3-bundler"
   },
   "config": {

@@ -1,0 +1,16 @@
+{
+  "name": "@charrue/vue-bundler-example-v2",
+  "private": true,
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "vue2-bundler"
+  },
+  "dependencies": {
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@charrue/vue2-bundler": "workspace:*"
+  }
+}
