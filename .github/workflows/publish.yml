@@ -28,6 +28,7 @@ jobs:
       - run: pnpm run build:shared
       - run: pnpm run build:v2
       - run: pnpm run build:v3
+      - run: git checkout -- .
       - run: pnpm publish --access=public --filter=@charrue/vue-bundler-shared
       - run: pnpm publish --access=public --filter=@charrue/vue3-bundler
       - run: pnpm publish --access=public --filter=@charrue/vue2-bundler

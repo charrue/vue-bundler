@@ -12,9 +12,13 @@ export const start = async () => {
   clean(userConfig.outputDir);
 
   logger.info("Start Build Vue File...", { color: true });
-  await build(userConfig);
-  await buildProduction(userConfig, false);
-  await buildProduction(userConfig, true);
+  if (userConfig.shouldModuleBuild) {
+    await build(userConfig);
+  }
+  if (userConfig.shouldFullBuild) {
+    await buildProduction(userConfig, false);
+    await buildProduction(userConfig, true);
+  }
 };
 
 export { defineConfig } from "@charrue/vue-bundler-shared";
