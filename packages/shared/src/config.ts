@@ -7,6 +7,7 @@ const CONFIG_KEY = "vueBuild";
 export type BuildConfig = {
   outputDir: string;
   input: string;
+  name: string;
 };
 
 export type LoadConfigOptions = {
@@ -16,6 +17,7 @@ export type LoadConfigOptions = {
 const defaultBuildConfig: BuildConfig = {
   input: "src/index.ts",
   outputDir: "dist",
+  name: "",
 };
 
 /**

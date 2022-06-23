@@ -6,8 +6,10 @@ es/
 lib/
 index.js
 index.min.js
+index.min.js.map
 index.mjs
 index.min.mjs
+index.min.mjs.map
 ```
 
 

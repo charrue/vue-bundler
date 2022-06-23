@@ -1,9 +1,16 @@
+import { resolve } from "path";
 import { rollup } from "rollup";
 import vue from "rollup-plugin-vue";
 import commonJs from "@rollup/plugin-commonjs";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 import Esbuild, { minify as minifyPlugin } from "rollup-plugin-esbuild";
-import { generateExternal, writeBundles, getBuildConfigEntries } from "@charrue/vue-bundler-shared";
+import {
+  generateExternal,
+  writeBundles,
+  getBuildConfigEntries,
+  formatPkgName,
+  getPkgName,
+} from "@charrue/vue-bundler-shared";
 import type { OutputOptions } from "rollup";
 import type { BuildConfig } from "@charrue/vue-bundler-shared";
 
@@ -66,4 +73,31 @@ export const build = async (options: BuildConfig) => {
       };
     }),
   );
+};
+
+export const buildProduction = async (options: BuildConfig, minify: boolean) => {
+  const { outputDir } = options;
+  const bundle = await getRollupBuildConfig({
+    ...options,
+    minify,
+    isProd: true,
+  });
+
+  await writeBundles(bundle, [
+    {
+      format: "umd",
+      file: resolve(outputDir, minify ? "index.min.js" : "index.js"),
+      exports: "named",
+      name: options.name || formatPkgName(getPkgName(options.input)),
+      globals: {
+        vue: "Vue",
+      },
+      sourcemap: minify,
+    },
+    {
+      format: "esm",
+      file: resolve(outputDir, minify ? "index.min.mjs" : "index.mjs"),
+      sourcemap: minify,
+    },
+  ]);
 };

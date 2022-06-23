@@ -1,6 +1,6 @@
 import rm from "rimraf";
 import { logger, getUserConfig } from "@charrue/vue-bundler-shared";
-import { build } from "./build";
+import { build, buildProduction } from "./build";
 
 export const clean = (dir: string) => {
   rm.sync(dir);
@@ -13,6 +13,8 @@ export const start = async () => {
 
   logger.info("Start Build Vue File...", { color: true });
   await build(userConfig);
+  await buildProduction(userConfig, true);
+  await buildProduction(userConfig, false);
 };
 
 export { defineConfig } from "@charrue/vue-bundler-shared";

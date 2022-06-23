@@ -1,3 +1,4 @@
+export { formatPkgName, getPkgName } from "./pkg";
 export { writeBundles, getBuildConfig, getBuildConfigEntries, generateExternal } from "./rollup";
 export { getUserConfig, defineConfig } from "./config";
 export { logger } from "./logger";
