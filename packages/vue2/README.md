@@ -15,7 +15,6 @@ index.min.mjs.map
 
 ## 下载
 ``` bash
-# 依赖于Vue3
 npm install @charrue/vue2-bundler -D
 ```
 
@@ -38,7 +37,8 @@ import { defineConfig } from "@charrue/vue2-bundler"
 export default defineConfig({
   vueBuild: {
     input: "src/index.ts",
-    outputDir: "dist"
+    outputDir: "dist",
+    name: "Foo"
   }
 })
 ```

@@ -38,7 +38,8 @@ import { defineConfig } from "@charrue/vue3-bundler"
 export default defineConfig({
   vueBuild: {
     input: "src/index.ts",
-    outputDir: "dist"
+    outputDir: "dist",
+    name: "Foo"
   }
 })
 ```
