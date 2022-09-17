@@ -2,7 +2,7 @@ import { resolve } from "path";
 import { rollup } from "rollup";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
-import DefineOptions from "unplugin-vue-define-options/rollup";
+import VueMacros from "unplugin-vue-macros/rollup";
 import commonJs from "@rollup/plugin-commonjs";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 import Esbuild, { minify as minifyPlugin } from "rollup-plugin-esbuild";
@@ -22,11 +22,16 @@ const getRollupBuildConfig = async (
   const { input, isProd, minify } = options;
 
   const plugins = [
-    DefineOptions(),
-    vue({
-      isProduction: isProd,
+    VueMacros({
+      setupComponent: false,
+      setupSFC: false,
+      plugins: {
+        vue: vue({
+          isProduction: isProd,
+        }),
+        vueJsx: vueJsx(),
+      },
     }),
-    vueJsx(),
     nodeResolve({
       extensions: [".mjs", ".js", ".json", ".ts"],
     }),
